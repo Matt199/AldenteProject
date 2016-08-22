@@ -10,10 +10,34 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var clockBrain = ClockBrain()
+    
     @IBOutlet weak var nameDetail: UILabel!
     
     
     @IBOutlet weak var detailTime: UILabel!
+    
+    
+    @IBAction func stopButton(sender: UIButton) {
+        clockBrain.stopTimer()
+    
+    }
+    
+    
+    
+    @IBAction func startButton(sender: UIButton) {
+        clockBrain.startTimer()
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(DetailViewController.coutingLabel), userInfo: nil, repeats: true)
+    
+    }
+    
+    
+    func coutingLabel() {
+        if clockBrain.isTimerWorking() {
+            detailTime.text = clockBrain.timeString(pastaTime*60)
+        
+        }
+    }
     
     
     var pastaTime = 0.0

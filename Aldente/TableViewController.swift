@@ -12,7 +12,7 @@ class TableViewController: UITableViewController {
     
     
     
-    var pastaArray:[PastaClass] = [PastaClass(pastaName: "Spaghetti", pastaImage: "spaghetti", pastaTime: 11.0),
+    var pastaArray:[PastaClass] = [PastaClass(pastaName: "Spaghetti", pastaImage: "spaghetti", pastaTime: 0.10),
                                    PastaClass(pastaName: "Fusilli", pastaImage: "fusilli", pastaTime: 9.0),
                                    PastaClass(pastaName: "Penne", pastaImage: "penne", pastaTime: 10.0),
                                    PastaClass(pastaName: "Farfalle", pastaImage: "farfalle", pastaTime: 13.0),
